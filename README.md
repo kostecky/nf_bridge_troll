@@ -1,5 +1,7 @@
 # nf_bridge_troll
-Allow network socket connections to a linux machine if the source_ip has a specific DNS A record for a subdomain that you control. Effectively allowing you to configure a dynamic firewall with 1 rule that allows you to grant access based on DNS records you control.
+Allow network socket connections to a linux machine if the source_ip has a specific DNS A record for a subdomain that you control. 
+
+This concept dates back to my days administering mail clusters that use DNSBLs to regulate SPAM traffic. This allows you to configure a dynamic firewall with 1 rule that allows you to grant access based on DNS records you control.
 
 ![got a red herring?](http://vignette3.wikia.nocookie.net/monkeyisland/images/f/f3/Troll.png)
 

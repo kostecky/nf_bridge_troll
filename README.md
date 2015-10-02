@@ -25,7 +25,7 @@ Utilizing Linux netfilter's NFQUEUE target we can allow a user space program to 
 # Installation and usage
 **Warning, this is not without dragons!**
 
-0. You will need to install the development packages on your distro that contain all the requirements that [python-netfilterqueue](https://github.com/kti/python-netfilterqueue) requires.
+0. You will need to install the development packages on your distro that contain all the requirements that [python-netfilterqueue](https://github.com/kti/python-netfilterqueue) has.
 
 0. `pip install -r requirements.txt`
 

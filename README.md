@@ -39,4 +39,8 @@ Utilizing Linux netfilter's NFQUEUE target we can allow a user space program to 
 
   This rule will target any tcp packets heading towards port 51235 and send it to queue number 1.
 
-0. Whenever you want to allow a host to have access to a machine, insert an A record in to your ACL_DOMAIN in the following format, `${SOURCE_IP}.${ACL_DOMAIN}`. For example `123.123.123.123.acl.yourdomain.com`
+0. Whenever you want to allow a host to have access to a machine, insert an A record in to your ACL_DOMAIN in the following format:
+
+  ```
+  123.123.123.123.acl.yourdomain.com.   IN A  127.0.0.2
+  ```

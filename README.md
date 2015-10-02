@@ -18,7 +18,7 @@ We leverage the python bindings for [libnetfilter_queue](https://home.regit.org/
 
 0. The packet is passed to the callback written in this process, which does the following:
 
-  a. Builds a DNS query based on the source IP: `1.2.3.4.acl.domain.com`
+  a. Builds a DNS query based on the source IP: `1.2.3.4.acl.yourdomain.com`
 
   b. Perform the DNS query
 
@@ -47,5 +47,5 @@ We leverage the python bindings for [libnetfilter_queue](https://home.regit.org/
 0. Whenever you want to allow a host to have access to a machine, insert an A record in to your ACL_DOMAIN in the following format:
 
   ```
-  123.123.123.123.acl.yourdomain.com.   IN A  127.0.0.2
+  1.2.3.4.acl.yourdomain.com.   IN A  127.0.0.2
   ```

@@ -6,7 +6,9 @@ This concept dates back to my days administering mail clusters that use DNSBLs t
 ![got a red herring?](http://vignette3.wikia.nocookie.net/monkeyisland/images/f/f3/Troll.png)
 
 # Description
-Utilizing Linux netfilter's NFQUEUE target we can allow a user space program to make a decision about whether or not a packet is accepted or dropped. We leverage the python bindings for [libnetfilter_queue](https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/) to analyze the source IP of a packet and a DNS A query for `${source_ip}.${acl_domain}` to see if a `127.0.0.2` response is received. If that record exists, it allows the packet through.
+Utilizing Linux netfilter's NFQUEUE target we can allow a user space program to make a decision about whether or not a packet is accepted or dropped. 
+
+We leverage the python bindings for [libnetfilter_queue](https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/) to analyze the source IP of a packet, issue a DNS A query for `${source_ip}.${acl_domain}`, and allow the packet if a `127.0.0.2` response is received.
 
 ## Example
 

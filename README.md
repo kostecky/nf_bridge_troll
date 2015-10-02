@@ -15,8 +15,11 @@ Utilizing Linux netfilter's NFQUEUE target we can allow a user space program to 
 0. The target machine checks to see if the packet is already part of an established connection. If not, it passes it to the NF_QUEUE target.
 
 0. The packet is passed to the callback written in this process, which does the following:
+
   a. Builds a DNS query based on the source IP: `1.2.3.4.acl.domain.com`
+
   b. Perform the DNS query
+
   c. If the RR answer matches `127.0.0.2` the packet is accepted and a connection is established
 
 # Installation and usage
